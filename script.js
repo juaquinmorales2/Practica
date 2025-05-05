@@ -114,17 +114,38 @@ console.log(cursos[3].estudiantes[0].nombre)
 console.log(cursos[3].estudiantes[0].nota)
 console.log(cursos[0].estudiantes.length)
 
+function buscarCursosYNotas(nombreEstudiante) {
+  const resultados = [];
 
-for (let j = 0; j < cursos[0].estudiantes.length; j++) {
-  let Luis = cursos.find((curso) => curso.estudiantes[j].name === "Luis")
+  cursos.forEach(curso => {
+    const estudiante = curso.estudiantes.find(e => e.nombre === nombreEstudiante);
+    if (estudiante) {
+      resultados.push({ curso: curso.nombre, nota: estudiante.nota });
+    }
+  });
 
-  console.log(Luis)
+  return resultados;
 }
+
+// Ejemplo de uso para Luis:
+const resultadosLuis = buscarCursosYNotas("Luis");
+console.log("Luis está inscrito en:");
+resultadosLuis.forEach(r => {
+  console.log(`- ${r.curso} con nota ${r.nota}`);
+});
+
+
 
 
 
 //ubicacion de la nota de Ana (el problema es que hay tres estudiantes Ana)
 
+// Ejemplo de uso para Ana:
+const resultadosAna = buscarCursosYNotas("Ana");
+console.log("Ana está inscrita en:");
+resultadosAna.forEach(r => {
+  console.log(`- ${r.curso} con nota ${r.nota}`);
+});
 
 
 
