@@ -1,0 +1,19 @@
+// FUNCION 1: Listar
+// Mostrá todos los nombres de los cursos con su profesor.
+
+// Mostrá todos los nombres de los estudiantes (sin repetir). > Gino 55-75
+
+// FUNCION 2: Filtrar
+// Mostrá solo los cursos donde Sofía está como estudiante. 
+
+// Mostrá todos los cursos que tienen al menos un estudiante con nota mayor a 8. > Kevin 80-100
+
+// FUNCION 3: Buscar
+// ¿En qué curso está Luis y cuál es su nota?
+
+// ¿Qué nota sacó Ana en el curso "Diseño UX/UI"? > Ricardo 110-130
+
+// FUNCION 4: Avanzado
+// Calculá el promedio de notas del curso "Programación Web".
+
+// Mostrá por cada curso: nombre del curso y nota promedio de sus estudiantes. > Luis 140-160
