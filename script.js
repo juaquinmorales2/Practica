@@ -50,3 +50,22 @@ const cursos = [
       ],
     }
   ];
+
+
+
+
+
+
+
+// FUNCION 4
+
+// Promedio de notas del curso "Programación Web"
+const cursoProg = cursos.find(c => c.nombre === "Programación Web");
+const promedioProg = cursoProg.estudiantes.reduce((acumulador, estud) => acumulador + estud.nota, 0) / cursoProg.estudiantes.length;
+console.log("Promedio del Curso Programación Web:", promedioProg.toFixed(2));
+
+// Promedio por curso
+cursos.forEach(curso => {
+  const promedio = curso.estudiantes.reduce((sum, estud) => sum + estud.nota, 0) / curso.estudiantes.length;
+  console.log(`${curso.nombre}: Promedio = ${promedio.toFixed(2)}`);
+});
